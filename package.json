@@ -1,0 +1,23 @@
+{
+  "name": "personal-api",
+  "version": "0.0.1",
+  "description": "Personal API project learning Express to return data in an API",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mikechi4/personal-api.git"
+  },
+  "author": "Michael Chi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mikechi4/personal-api/issues"
+  },
+  "homepage": "https://github.com/mikechi4/personal-api#readme",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "express": "^4.14.0"
+  }
+}
