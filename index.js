@@ -13,7 +13,11 @@ app.get('/location', mainCtrl.getLocation);
 app.get('/occupation', mainCtrl.getOccupation);
 app.get('/occupation/last', mainCtrl.getLatestOccupation);
 app.get('/hobbies', mainCtrl.getHobbies);
-app.get('/hobbies/:type', mainCtrl.getHobbiesByType); 
+app.get('/hobbies/:type', mainCtrl.getHobbiesByType);
+app.get('/family', mainCtrl.getFamily);
+app.get('/family/:gender', mainCtrl.getFamilyByGender);
+app.get('/restaurants', mainCtrl.getRestaurants);
+app.get('/restaurants/:restName', mainCtrl.getRestaurantsByName);
 
 var port = 3000;
 app.listen(port, function(){
