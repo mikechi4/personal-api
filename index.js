@@ -19,6 +19,14 @@ app.get('/family/:gender', mainCtrl.getFamilyByGender);
 app.get('/restaurants', mainCtrl.getRestaurants);
 app.get('/restaurants/:restName', mainCtrl.getRestaurantsByName);
 
+app.put('/name/:newName', mainCtrl.updateName);
+app.put('/location/:newLocation', mainCtrl.updateLocation);
+
+app.post('/hobbies', mainCtrl.addHobby);
+app.post('/occupation/:job', mainCtrl.addOccuption);
+app.post('/family', mainCtrl.addFamily);
+app.post('/restaurants', mainCtrl.addRestaurant);
+
 var port = 3000;
 app.listen(port, function(){
   console.log("Connected to " + port);

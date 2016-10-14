@@ -17,7 +17,7 @@ module.exports = {
       if(order === 'asc'){
         console.log('asc')
         return res.send({Occupation: user.occupations.sort()});
-      } else if(order==='desc'){
+      } else if(order ==='desc'){
           return res.send({Occupation: user.occupations.reverse()});
           console.log('DESC@@')
       } else {
@@ -75,6 +75,61 @@ module.exports = {
       }
     })
     res.status(200).json(restaurant);
+  },
 
+  updateName: function(req, res, next) {
+    var newName = req.params.newName;
+    user.name = newName;
+    res.end();
+  },
+
+  updateLocation: function(req, res, next) {
+    var newLocation = req.params.newLocation;
+    user.location = newLocation;
+    res.end();
+  },
+
+  addHobby: function(req, res, next){
+    var hobbyName = req.query.name;
+    var hobbyType = req.query.type;
+    var newHobby ={
+      name: hobbyName,
+      type: hobbyType
+    };
+    user.hobbies.push(newHobby);
+    res.end();
+  },
+
+  addOccuption: function(req, res, next){
+    var newOcc = req.params.job;
+    user.occupations.push(newOcc);
+    console.log("new job! " +newOcc)
+    res.end();
+  },
+
+  addFamily: function(req, res, next){
+    var name = req.query.name;
+    var relation = req.query.relation;
+    var gender = req.query.gender;
+    var newFamily ={
+      name: name,
+      relation: relation,
+      gender: gender
+    };
+    user.family.push(newFamily);
+    res.end();
+  },
+
+  addRestaurant: function(req, res, next){
+    var name = req.query.name;
+    var type = req.query.type;
+    var rating = req.query.rating;
+    var newRestaurant ={
+      name: name,
+      type: type,
+      rating: rating
+    };
+    user.restaurants.push(newRestaurant);
+    res.end();
   }
 }
